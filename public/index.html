@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title>hmr-test</title>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but hmr-test doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but hmr-test doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
+      >
     </noscript>
-    <div id="app"></div>
+    <p>This is the version served from webpack that has HMR working.</p>
+    <p id="time">0</p>
+    <script>
+      let t = 0;
+      const e = document.getElementById('time');
+      setInterval(() => {
+        e.textContent = t;
+        t++;
+      }, 1000);
+    </script>
+    <div style="border: 1px solid blue;">
+      <div id="app"></div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>

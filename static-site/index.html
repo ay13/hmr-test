@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>This is a static site</title>
+  </head>
+  <body>
+    <h1>This is a static site</h1>
+    <p>
+      This site is outside of Vue's control. I am am trying to get HMR to work
+      inside of it to simulate working inside a CMS. YOu can view the version
+      served by webpack that has HMR working at
+      <a href="http://localhost:8080/" target="_blank"
+        >http://localhost:8080/</a
+      >
+    </p>
+    <p>
+      The timer below should keep ticking while the content inside of the box
+      below changes if HMR is set up correctly. If the timer starts back over at
+      0 then the whole page refreshed. You can change the text below by changing
+      the 'msg' property in line 3 of src/App.vue
+    </p>
+    <p id="time">0</p>
+    <div style="border: 1px solid blue;">
+      <div id="app"></div>
+    </div>
+    <script>
+      let t = 0;
+      const e = document.getElementById('time');
+      setInterval(() => {
+        e.textContent = t;
+        t++;
+      }, 1000);
+    </script>
+    <script src="http://localhost:8080/app.js"></script>
+  </body>
+</html>
