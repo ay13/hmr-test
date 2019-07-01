@@ -6,7 +6,7 @@
 npm ci
 ```
 
-### Run everyting with a single command
+### Run everything with a single command
 
 ```
 npm run begin
