@@ -3,8 +3,8 @@ module.exports = {
     host: "localhost",
     port: 8080,
     headers: {
-      "Access-Control-Allow-Origin":"*",
-    },
+      "Access-Control-Allow-Origin": "*"
+    }
   },
-  publicPath: "http://localhost:8080/",
+  publicPath: "http://localhost:8080/"
 };
