@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "static": "http-server ./static-site -p 5678 -o",
+    "static": "http-server ./static-site -a localhost -p 5678 -o",
     "begin": "concurrently \"npm run serve\" \"npm run static\""
   },
   "dependencies": {
